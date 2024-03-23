@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.baliasnikov.grpctestnumbergenerator;
+
+import "google/protobuf/empty.proto";
+
+import "number_message.proto";
+import "number_sequence.proto";
+
+/**
+ * Сервис со всеми запросами и стримами приложения.
+ */
+service NumberService {
+  /**
+   * Генерация новой последовательности чисел.
+   */
+  rpc GenerateNewSequence (NumberSequence) returns (google.protobuf.Empty) {}
+
+  /**
+   * Стрим данных от сервера к клиенту.
+   */
+  rpc serverStream (google.protobuf.Empty) returns (stream NumberMessage) {}
+}

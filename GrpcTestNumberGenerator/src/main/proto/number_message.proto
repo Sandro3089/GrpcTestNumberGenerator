@@ -1,0 +1,10 @@
+syntax = "proto3";
+package com.baliasnikov.grpctestnumbergenerator;
+
+/**
+ * Сообщение с текущим числом от сервера к клиенту.
+ */
+message NumberMessage {
+  /** Текущее число. */
+  int32 currentValue = 1;
+}

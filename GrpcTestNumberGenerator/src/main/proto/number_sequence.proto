@@ -1,0 +1,12 @@
+syntax = "proto3";
+package com.baliasnikov.grpctestnumbergenerator;
+
+/**
+ * Последовательность чисел для стриминга от сервера к клиенту.
+ */
+message NumberSequence {
+  /** Минимальное число. */
+  int32 firstValue = 1;
+  /** Максимальное число. */
+  int32 lastValue = 10;
+}
